@@ -1,0 +1,9 @@
+bin/AndroidManifest.xml
+bin/SlidingMenu.apk
+bin/classes.dex
+bin/classes/info/androidhive/slidingmenu/BuildConfig.class
+bin/*
+gen/*
+*.class
+*.jar
+*.cache
