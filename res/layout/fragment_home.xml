@@ -1,21 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    <TextView
-        android:id="@+id/txtLabel"
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="16dp"
-        android:text="Home View"/>
-    
-    <ImageView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLabel"
-        android:src="@drawable/ic_home"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
 
-</RelativeLayout>
+<RelativeLayout
+      	xmlns:android="http://schemas.android.com/apk/res/android"
+  		android:layout_width="fill_parent"
+  		android:layout_height="fill_parent" android:background="@drawable/home_bg">
+ 
+        <!--  Header  Starts-->
+        
+        
+        <!--  Header Ends -->
+        <!-- Footer Start -->
+        <LinearLayout android:id="@+id/footer"
+                android:layout_width="fill_parent"
+                android:layout_height="130dip"
+                android:gravity="center"
+                android:paddingLeft="10dip"                
+                android:paddingRight="10dip"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+                
+                <!-- Link to Registration Screen -->
+		        <TextView android:id="@+id/link_to_register"
+		              android:background="#99FF0000"
+		                android:layout_width="fill_parent"
+		                android:layout_height="48dp"
+		                android:text="SUBE TU VIDEO"
+		                android:gravity="center"
+		                android:textSize="20dip"
+		                android:textStyle="bold"
+		                android:textColor="#FFFFFF"/>
+                
+                <Button android:id="@+id/buttonLogin"
+		                android:layout_width="64dp"
+		                android:layout_height="64dp"
+		                android:layout_marginTop="5dp"
+		                android:background="@drawable/load_icon" />
+        </LinearLayout>
+        <!-- Footer Ends -->
+ 
+        <!-- Login Form -->
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dip"
+          android:layout_below="@id/header">
+          
+          
+          
+         
+ 
+        </RelativeLayout>
+        <!-- Login Form Ends -->
+  </RelativeLayout>

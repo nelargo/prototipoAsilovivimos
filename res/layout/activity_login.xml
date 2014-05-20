@@ -1,8 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
 
-</LinearLayout>
+  <RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:background="@drawable/fondo_login">
+ 
+        <!--  Header  Starts-->
+        <LinearLayout android:id="@+id/header"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:paddingTop="11dp"
+                android:paddingBottom="1dp"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
+                
+                <!-- Logo Start-->
+                <ImageView android:src="@drawable/texto_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"/>
+                <!-- Logo Ends -->
+        </LinearLayout>
+        
+        <!--  Header Ends -->
+        <!-- Footer Start -->
+        <LinearLayout android:id="@+id/footer"
+                android:layout_width="fill_parent"
+                android:layout_height="130dip"
+                android:gravity="center"
+                android:paddingLeft="10dip"                
+                android:paddingRight="10dip"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+                
+                <!-- Link to Registration Screen -->
+		        <TextView android:id="@+id/link_to_register"
+		              android:background="#99FF0000"
+		                android:layout_width="fill_parent"
+		                android:layout_height="48dp"
+		                android:text="¿OLVIDÓ SU CLAVE?"
+		                android:gravity="center"
+		                android:textSize="20dip"
+		                android:textStyle="bold"
+		                android:textColor="#FFFFFF"/>
+                
+                <Button android:id="@+id/buttonLogin"
+		                android:layout_width="64dp"
+		                android:layout_height="64dp"
+		                android:layout_marginTop="5dp"
+		                android:background="@drawable/load_icon" />
+        </LinearLayout>
+        <!-- Footer Ends -->
+ 
+        <!-- Login Form -->
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="140dip"
+          android:paddingLeft="10dip"
+          android:paddingRight="10dip"
+          android:layout_below="@id/header">
+          
+          <!--  Email Label -->
+          
+          <EditText android:layout_width="fill_parent"
+              android:background="#99BDBDBD"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dip"
+                android:layout_marginBottom="5dip"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:hint="EMAIL"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"  
+                android:textSize="25sp"              
+                android:textStyle="italic|bold"
+                android:gravity="right" />
+          <!--  Password Label -->
+          
+          <EditText android:layout_width="fill_parent"
+              android:background="#99BDBDBD"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dip"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:hint="CLAVE"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"  
+                android:textSize="25sp"              
+                android:textStyle="italic|bold"
+                android:gravity="right" />
+          <!-- Login button -->
+          
+          
+ 
+        </LinearLayout>
+        <!-- Login Form Ends -->
+  </RelativeLayout>
+
