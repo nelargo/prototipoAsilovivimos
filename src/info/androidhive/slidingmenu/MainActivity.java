@@ -10,6 +10,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -18,7 +19,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.Transformation;
 import android.widget.AdapterView;
@@ -53,14 +53,18 @@ public class MainActivity extends Activity {
 		// load slide menu items
 		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 		
+		/**Sponsor Image**/
 		iv = (ImageView)findViewById(R.id.imageView1);
-		iv.setVisibility(View.GONE);
 		
 		// nav drawer icons from resources
 		navMenuIcons = getResources()
 				.obtainTypedArray(R.array.nav_drawer_icons);
-
+		
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		
+		/** Color al oscurecer el fondo cuando se abre el menu**/
+		//mDrawerLayout.setScrimColor(Color.parseColor("#00FFFFFF"));
+		
 		mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 		
 		//mDrawerLayout.setPadding(0, 0, 229, 0);
@@ -103,9 +107,13 @@ public class MainActivity extends Activity {
 		
 		/**Cambiar Fondo ACTIONBAR **/
 		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.abbg));
+		
 		/** ESCONDER ACTIONBAR
 		 **	getActionBar().hide();
 		 **/
+		
+		mDrawerLayout.setScrimColor(Color.parseColor("#00FFFFFF"));
+		
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, //nav menu toggle icon
 				R.string.app_name, // nav drawer open - description for accessibility
@@ -127,6 +135,8 @@ public class MainActivity extends Activity {
 				// calling onPrepareOptionsMenu() to hide action bar icons
 				invalidateOptionsMenu();
 			}
+			
+			
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
