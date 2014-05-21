@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -206,7 +207,8 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			//fragment = new HomeFragment();
+			Intent i = new Intent(this,CameraActivity.class);
+			startActivity(i);
 			break;
 		case 1:
 			//fragment = new FindPeopleFragment();

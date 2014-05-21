@@ -19,7 +19,7 @@ public class LoginActivity extends Activity{
 		
 		setContentView(R.layout.activity_login);
 		
-		Button b = (Button)findViewById(R.id.buttonLogin);
+		Button b = (Button)findViewById(R.id.buttonUpload);
 		
 		b.setOnClickListener(new OnClickListener(){
 

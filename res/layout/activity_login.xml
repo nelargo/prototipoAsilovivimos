@@ -46,11 +46,11 @@
 		                android:textStyle="bold"
 		                android:textColor="#FFFFFF"/>
                 
-                <Button android:id="@+id/buttonLogin"
+                <Button android:id="@+id/buttonUpload"
 		                android:layout_width="64dp"
 		                android:layout_height="64dp"
 		                android:layout_marginTop="5dp"
-		                android:background="@drawable/load_icon" />
+		                android:background="@drawable/anim_btn_upload" />
         </LinearLayout>
         <!-- Footer Ends -->
  
