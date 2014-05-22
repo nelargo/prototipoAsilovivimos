@@ -65,14 +65,14 @@
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/VideoListPrev"
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:scaleType="fitXY"
             android:src="@drawable/icon_question" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/itemListTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="7dp"

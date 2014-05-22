@@ -12,7 +12,7 @@ import android.widget.ToggleButton;
 
 public class HomeFragment extends Fragment {
 	private ToggleButton tbSi,tbNo, tbU, tbCasa, tbCancha, tbBar;
-	private int preg1, preg2;
+	
 	public HomeFragment(){}
 	
 	@Override

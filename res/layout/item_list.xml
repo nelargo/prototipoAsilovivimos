@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="#292b2e" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/itemListTitle"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/itemListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:text="Título video"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="4dp"
+        android:layout_toRightOf="@+id/linearLayout2"
+        android:background="@drawable/upload_greeg"
+        android:text="ToggleButton"
+        android:textOff=" " />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="80dp"
+        android:layout_height="56dp"
+        android:layout_alignLeft="@+id/itemListTitle"
+        android:layout_alignTop="@+id/toggleButton2"
+        android:layout_marginBottom="10dp"
+        android:background="@color/list_background_pressed"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/VideoListPrev"
+            android:layout_width="80dp"
+            android:layout_height="56dp"
+            android:layout_margin="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_camera" />
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignBaseline="@+id/toggleButton3"
+        android:layout_alignBottom="@+id/toggleButton3"
+        android:layout_toRightOf="@+id/toggleButton3"
+        android:background="@drawable/upload_youtube"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textOff=" "
+        android:textOn=" " />
+
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignBaseline="@+id/toggleButton2"
+        android:layout_alignBottom="@+id/toggleButton2"
+        android:layout_marginRight="4dp"
+        android:layout_toRightOf="@+id/toggleButton2"
+        android:background="@drawable/upload_facebook"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textOff=" " />
+
+</RelativeLayout>

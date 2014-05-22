@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 		
 		/**Sponsor Image**/
-		iv = (ImageView)findViewById(R.id.imageView1);
+		iv = (ImageView)findViewById(R.id.VideoListPrev);
 		
 		// nav drawer icons from resources
 		navMenuIcons = getResources()
@@ -214,16 +214,17 @@ public class MainActivity extends Activity {
 			//fragment = new FindPeopleFragment();
 			break;
 		case 2:
-			//fragment = new PhotosFragment();
+			Intent j = new Intent(this,ListActivity.class);
+			startActivity(j);
 			break;
 		case 3:
-			//fragment = new CommunityFragment();
+			fragment = new PagesFragment();
 			break;
 		case 4:
-			//fragment = new PagesFragment();
+			fragment = new WhatsHotFragment();
 			break;
 		case 5:
-			//fragment = new WhatsHotFragment();
+			fragment = new FindPeopleFragment();
 			break;
 		case 6:
 			this.finish();
