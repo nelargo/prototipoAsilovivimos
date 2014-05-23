@@ -6,15 +6,17 @@
   android:layout_height="fill_parent" android:background="@drawable/fondo_login">
  
         <!--  Header  Starts-->
-        <LinearLayout android:id="@+id/header"
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:paddingTop="11dp"
-                android:paddingBottom="1dp"
-                android:paddingLeft="5dip"
-                android:paddingRight="5dip"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:paddingTop="11dp" >
                 
                 <!-- Logo Start-->
                 <ImageView android:src="@drawable/texto_login"
@@ -36,8 +38,13 @@
                 android:orientation="vertical">
                 
                 <!-- Link to Registration Screen -->
-		        <TextView android:id="@+id/link_to_register"
-		              android:background="#99FF0000"
+                <Button android:id="@+id/buttonUpload1"
+		                android:layout_width="64dp"
+		                android:layout_height="64dp"
+		                android:layout_marginTop="5dp"
+		                android:background="@drawable/anim_btn_upload" />
+		       
+                <TextView android:id="@+id/link_to_register"
 		                android:layout_width="fill_parent"
 		                android:layout_height="48dp"
 		                android:text="¿OLVIDÓ SU CLAVE?"
@@ -46,22 +53,19 @@
 		                android:textStyle="bold"
 		                android:textColor="#FFFFFF"/>
                 
-                <Button android:id="@+id/buttonUpload"
-		                android:layout_width="64dp"
-		                android:layout_height="64dp"
-		                android:layout_marginTop="5dp"
-		                android:background="@drawable/anim_btn_upload" />
+                
         </LinearLayout>
         <!-- Footer Ends -->
  
         <!-- Login Form -->
+
         <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="140dip"
-          android:paddingLeft="10dip"
-          android:paddingRight="10dip"
-          android:layout_below="@id/header">
+            android:layout_width="match_parent"
+            android:layout_height="140dip"
+            android:layout_above="@+id/footer"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
           
           <!--  Email Label -->
           
@@ -73,11 +77,11 @@
                 android:paddingRight="10dp"
                 android:paddingTop="5dp"
                 android:singleLine="true"
-                android:hint="EMAIL"
+                android:hint="USUARIO"
                 android:textColorHint="#FFFFFF"
                 android:textColor="#FFFFFF"  
-                android:textSize="25sp"              
-                android:textStyle="italic|bold"
+                android:textSize="20sp"              
+                android:textStyle="italic"
                 android:gravity="right" />
           <!--  Password Label -->
           
@@ -88,11 +92,12 @@
                 android:paddingRight="10dp"
                 android:paddingTop="5dp"
                 android:singleLine="true"
+                android:password="true"
                 android:hint="CLAVE"
                 android:textColorHint="#FFFFFF"
                 android:textColor="#FFFFFF"  
-                android:textSize="25sp"              
-                android:textStyle="italic|bold"
+                android:textSize="20sp"              
+                android:textStyle="italic"
                 android:gravity="right" />
           <!-- Login button -->
           

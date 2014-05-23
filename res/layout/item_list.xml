@@ -44,13 +44,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="80dp"
+        android:layout_width="72dp"
         android:layout_height="56dp"
         android:layout_alignLeft="@+id/itemListTitle"
         android:layout_alignTop="@+id/toggleButton2"
         android:layout_marginBottom="10dp"
         android:background="@color/list_background_pressed"
-        android:gravity="center" >
+        android:gravity="center"
+        android:padding="1dp" >
 
         <ImageView
             android:id="@+id/VideoListPrev"

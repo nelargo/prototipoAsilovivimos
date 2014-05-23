@@ -41,6 +41,11 @@
             android:name="info.androidhive.slidingmenu.CameraActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:screenOrientation="landscape"
+            android:name="info.androidhive.slidingmenu.AsilovivimosActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

@@ -101,7 +101,9 @@ public class MainActivity extends Activity {
 		adapter = new NavDrawerListAdapter(getApplicationContext(),
 				navDrawerItems);
 		mDrawerList.setAdapter(adapter);
-
+		float friction = 0.005f;
+		mDrawerList.setFriction(friction);
+//		mDrawerList
 		// enabling action bar app icon and behaving it as toggle button
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
@@ -112,8 +114,8 @@ public class MainActivity extends Activity {
 		/**VISIBILIDAD DEL TITULO **/
 		getActionBar().setDisplayShowTitleEnabled(false);
 		
-		/**Cambiar Fondo ACTIONBAR **/
-		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.abbg));
+//		/**Cambiar Fondo ACTIONBAR **/
+		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_bg));
 		
 		/** ESCONDER ACTIONBAR
 		 **	getActionBar().hide();
@@ -207,27 +209,30 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			Intent i = new Intent(this,CameraActivity.class);
+			Intent i = new Intent(this,CameraActivity.class); //CAMARA
 			startActivity(i);
 			break;
 		case 1:
-			//fragment = new FindPeopleFragment();
+			//fragment = new PhotosFragment(); //ASILOVIVIMOS
+			Intent a = new Intent(this, AsilovivimosActivity.class);
+			startActivity(a);
 			break;
 		case 2:
-			Intent j = new Intent(this,ListActivity.class);
-			startActivity(j);
+//			Intent j = new Intent(this,ListActivity.class);
+//			startActivity(j);
+			fragment = new WhatsHotFragment(); //LISTADO
 			break;
 		case 3:
-			fragment = new PagesFragment();
+			fragment = new PagesFragment(); //CHAT
 			break;
 		case 4:
-			fragment = new WhatsHotFragment();
+			fragment = new WhatsHotFragment(); //LISTADO
 			break;
 		case 5:
-			fragment = new FindPeopleFragment();
+			fragment = new FindPeopleFragment(); //TERMINOS
 			break;
 		case 6:
-			this.finish();
+			this.finish(); //LOGOUT
 			break;
 		case 7:
 			fragment = new HomeFragment();

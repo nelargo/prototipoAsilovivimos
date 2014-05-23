@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/camera_bg"
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
@@ -12,12 +12,14 @@
         android:scaleType="fitXY"
         android:src="@drawable/cocacola2" />
 
-    <include
-        android:layout_width="wrap_content"
+    <ListView
+        android:id="@+id/whlistview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/imageView1"
-        layout="@layout/list_activity" />
+        android:layout_toLeftOf="@+id/camera_bg" >
+
+    </ListView>
 
 </RelativeLayout>

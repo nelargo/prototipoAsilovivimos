@@ -21,24 +21,24 @@
         android:paddingRight="10dip" >
 
         <!-- Link to Registration Screen -->
-
-        <TextView
-            android:id="@+id/link_to_register"
-            android:layout_width="fill_parent"
-            android:layout_height="48dp"
-            android:background="#99FF0000"
-            android:gravity="center"
-            android:text="SUBE TU VIDEO"
-            android:textColor="#FFFFFF"
-            android:textSize="20dip"
-            android:textStyle="bold" />
-
+        
         <Button
             android:id="@+id/buttonUpload"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/anim_btn_upload" />
+
+        <TextView
+            android:id="@+id/link_to_register"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="SUBIR"
+            android:textColor="#FFFFFF"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+
     </LinearLayout>
     <!-- Footer Ends -->
 

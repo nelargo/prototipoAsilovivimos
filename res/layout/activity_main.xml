@@ -17,8 +17,8 @@
     <ImageView
             android:id="@+id/VideoListPrev"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
             android:paddingLeft="231dp"
             android:src="@drawable/sponsor1"
             android:visibility="gone" />

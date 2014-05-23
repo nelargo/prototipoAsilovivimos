@@ -1,16 +1,12 @@
 package info.androidhive.slidingmenu;
 
+import java.io.File;
 import java.util.ArrayList;
 
-import info.androidhive.slidingmenu.adapter.ListVideoAdapter;
-import info.androidhive.slidingmenu.model.ListVideosItem;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.os.Environment;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ListView;
 
 public class ListActivity extends Activity{
@@ -23,15 +19,61 @@ public class ListActivity extends Activity{
 		// Activity sin parte superior
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
-		setContentView(R.layout.list_activity);
-		items.add(new ListVideosItem("Chile vs España 22:30", "asd"));
-		items.add(new ListVideosItem("Chile vs España 22:30", "asd"));
-		items.add(new ListVideosItem("Chile vs España 22:30", "asd"));
-		items.add(new ListVideosItem("Chile vs España 22:30", "asd"));
-		items.add(new ListVideosItem("Chile vs España 22:30", "asd"));
-		lv = (ListView)findViewById(R.id.listView1);
-        ListVideoAdapter lva = new ListVideoAdapter(this, items);
-        lv.setAdapter(lva);
 		
+		setContentView(R.layout.list_activity);
+		items = new ArrayList<ListVideosItem>();
+		
+		
+//		listarVideos();
+		ListVideosItem a = new ListVideosItem("Chile vs España 22:30", "0");
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		a = new ListVideosItem("Chile vs Australia 22:30", "0");
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		items.add(a);
+		
+		lv = (ListView)findViewById(R.id.whlistview);
+    	ListVideoAdapter lva = new ListVideoAdapter(this, items);
+    	lv.setVelocityScale(0.005f);
+//    	lv.setFriction(10f);
+    	lv.setAdapter(lva);
+
+    	
+    	
+    	//lv.setOnItemClickListener(new OnItemClickListener);
+		
+	}
+	
+	public void listarVideos(){
+		
+//		File path = new File(Environment.getExternalStorageDirectory(),"/ASILOVIVIMOS");
+		
+//		ListVideosItem a = new ListVideosItem("Chile vs España 22:30", "0");
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
+//		items.add(a);
 	}
 }

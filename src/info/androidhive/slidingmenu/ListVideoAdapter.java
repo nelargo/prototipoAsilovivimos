@@ -1,8 +1,7 @@
-package info.androidhive.slidingmenu.adapter;
+package info.androidhive.slidingmenu;
 
 import java.util.ArrayList;
-import info.androidhive.slidingmenu.R;
-import info.androidhive.slidingmenu.model.ListVideosItem;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,19 +28,19 @@ public class ListVideoAdapter extends ArrayAdapter<ListVideosItem> {
 		View rowView = inflater.inflate(R.layout.item_list, parent, false);
 		
 		TextView titulo =(TextView) rowView.findViewById(R.id.itemListTitle);
-		preview = (ImageView) rowView.findViewById(R.id.VideoListPrev);
+		//preview = (ImageView) rowView.findViewById(R.id.VideoListPrev);
 		
 		titulo.setText(itemsArrayList.get(position).getTitulo());
-		if(position == 0)
-			preview.setImageResource(R.drawable.bg_camera);
-		if(position == 1)
-			preview.setImageResource(R.drawable.bg_camera);
-		if(position == 2)
-			preview.setImageResource(R.drawable.bg_camera);
-		if(position == 3)
-			preview.setImageResource(R.drawable.bg_camera);
-		if(position == 4)
-			preview.setImageResource(R.drawable.bg_camera);
+//		if(position == 0)
+//			preview.setImageResource(R.drawable.bg_camera);
+//		if(position == 1)
+//			preview.setImageResource(R.drawable.cocacola);
+//		if(position == 2)
+//			preview.setImageResource(R.drawable.bg_camera);
+//		if(position == 3)
+//			preview.setImageResource(R.drawable.bg_camera);
+//		if(position == 4)
+//			preview.setImageResource(R.drawable.bg_camera);
 		
 		return rowView;
 		
