@@ -29,9 +29,9 @@ public class LoginActivity extends Activity{
 		user.setHint(Html.fromHtml("<small><small><small>"+
 				getString(R.string.user_hint)+
 				"</small></small></small>"));
-		pass.setHint(Html.fromHtml("<small><small>"+
+		pass.setHint(Html.fromHtml("<small><small><small>"+
 				getString(R.string.pass_hint)+
-				"</small></small>"));
+				"</small></small></small>"));
 		forget.setTypeface(Typeface.createFromAsset(getAssets(), "bauhaus_93.ttf"));
 		
 		
