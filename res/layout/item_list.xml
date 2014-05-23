@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="85dp"
+    android:layout_height="90dp"
     android:background="#292b2e" >
 
     <LinearLayout
@@ -12,11 +12,8 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/itemListTitle"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:background="@color/white"
         android:orientation="vertical" >
-
     </LinearLayout>
 
     <TextView
@@ -25,42 +22,56 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="17dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="7dp"
         android:text="Título video"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="10sp" />
 
     <ToggleButton
-        android:id="@+id/toggleButton2"
+        android:id="@+id/btnItemState"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="14dp"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="4dp"
-        android:layout_toRightOf="@+id/linearLayout2"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/RelativeLayout1"
         android:background="@drawable/upload_greeg"
-        android:text="ToggleButton"
-        android:textOff=" " />
+        android:textOff=""
+        android:textOn="" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
         android:layout_width="72dp"
         android:layout_height="56dp"
         android:layout_alignLeft="@+id/itemListTitle"
-        android:layout_alignTop="@+id/toggleButton2"
+        android:layout_alignTop="@+id/linearLayout1"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         android:background="@color/list_background_pressed"
-        android:gravity="center"
-        android:padding="1dp" >
+        android:gravity="center" >
 
         <ImageView
             android:id="@+id/VideoListPrev"
             android:layout_width="80dp"
             android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_margin="1dp"
             android:scaleType="fitXY"
             android:src="@drawable/bg_camera" />
-    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_play_asilovivimos" />
+
+    </RelativeLayout>
 
     <ToggleButton
         android:id="@+id/toggleButton1"
@@ -68,24 +79,39 @@
         android:layout_height="32dp"
         android:layout_alignBaseline="@+id/toggleButton3"
         android:layout_alignBottom="@+id/toggleButton3"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/toggleButton3"
         android:background="@drawable/upload_youtube"
         android:checked="false"
-        android:text="ToggleButton"
-        android:textOff=" "
-        android:textOn=" " />
+        android:textOff=""
+        android:textOn="" />
 
     <ToggleButton
         android:id="@+id/toggleButton3"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_alignBaseline="@+id/toggleButton2"
-        android:layout_alignBottom="@+id/toggleButton2"
+        android:layout_alignBaseline="@+id/btnItemState"
+        android:layout_alignBottom="@+id/btnItemState"
+        android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:layout_toRightOf="@+id/toggleButton2"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/btnItemState"
         android:background="@drawable/upload_facebook"
         android:checked="false"
-        android:text="ToggleButton"
-        android:textOff=" " />
+        android:textOff=""
+        android:textOn="" />
+
+    <TextView
+        android:id="@+id/txtItemTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/itemListTitle"
+        android:padding="1dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
 
 </RelativeLayout>

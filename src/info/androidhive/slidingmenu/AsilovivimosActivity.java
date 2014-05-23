@@ -18,19 +18,18 @@ public class AsilovivimosActivity extends Activity{
 		// Activity sin parte superior
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		setContentView(R.layout.fragment_photos);
 		
-		Button b = (Button)findViewById(R.id.asilovivimos_play);
-		
-		b.setOnClickListener(new OnClickListener(){
-
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				AsilovivimosActivity.this.finish();
-			}
-			
-		});
+//		Button b = (Button)findViewById(R.id.asilovivimos_play);
+//		
+//		b.setOnClickListener(new OnClickListener(){
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				// TODO Auto-generated method stub
+//				AsilovivimosActivity.this.finish();
+//			}
+//			
+//		});
 	}
 }

@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 public class ListActivity extends Activity{
 	private ListView lv;
-	private ArrayList<ListVideosItem> items;
+	private ArrayList<ListVideosItem> items = null;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,32 +20,21 @@ public class ListActivity extends Activity{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
 		
-		setContentView(R.layout.list_activity);
+		setContentView(R.layout.fragment_whats_hot);
+		
 		items = new ArrayList<ListVideosItem>();
 		
 		
 //		listarVideos();
-		ListVideosItem a = new ListVideosItem("Chile vs España 22:30", "0");
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		a = new ListVideosItem("Chile vs Australia 22:30", "0");
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
-		items.add(a);
+//		ListVideosItem a = new ListVideosItem("Chile vs España 22:30", "0");
+//		items.add(a);
+//		items.add(a);
+//		a = new ListVideosItem("Chile vs Australia 22:30", "0");
+		
 		
 		lv = (ListView)findViewById(R.id.whlistview);
     	ListVideoAdapter lva = new ListVideoAdapter(this, items);
-    	lv.setVelocityScale(0.005f);
+//    	lv.setVelocityScale(0.005f);
 //    	lv.setFriction(10f);
     	lv.setAdapter(lva);
 

@@ -31,7 +31,7 @@
         android:src="@drawable/icon_sodicac" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/asilovivimos_menu"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_alignParentLeft="true"
@@ -51,7 +51,7 @@
         android:gravity="center" >
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button41"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="80dp"
             android:layout_height="20dp"
@@ -59,7 +59,7 @@
             android:background="@drawable/icon_recomend_facebook" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button31"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="20dp"
@@ -67,7 +67,7 @@
             android:background="@drawable/icon_recomend_twitter" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button21"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="20dp"
