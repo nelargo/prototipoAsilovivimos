@@ -5,7 +5,7 @@
 
     <ImageView
         android:id="@+id/camera_bg"
-        android:layout_width="100dp"
+        android:layout_width="90dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
