@@ -1,5 +1,8 @@
 package info.androidhive.slidingmenu;
 
+import info.androidhive.slidingmenu.adapter.ListVideoAdapter;
+import info.androidhive.slidingmenu.model.ListVideosItem;
+
 import java.io.File;
 import java.util.ArrayList;
 

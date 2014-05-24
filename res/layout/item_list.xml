@@ -63,13 +63,15 @@
             android:scaleType="fitXY"
             android:src="@drawable/bg_camera" />
 
-        <ImageView
-            android:id="@+id/imageView1"
+        <Button
+            android:id="@+id/btn_listPlay"
+            style="?android:attr/buttonStyleSmall"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/icon_play_asilovivimos" />
+            android:background="@drawable/anim_btn_play"
+            android:text=" " />
 
     </RelativeLayout>
 

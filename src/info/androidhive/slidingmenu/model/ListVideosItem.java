@@ -1,4 +1,4 @@
-package info.androidhive.slidingmenu;
+package info.androidhive.slidingmenu.model;
 
 public class ListVideosItem {
 	private String Titulo;

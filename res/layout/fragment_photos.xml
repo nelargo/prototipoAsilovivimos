@@ -3,8 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <VideoView
+        android:id="@+id/reproductorvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/reproductor_fondo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -13,7 +18,7 @@
         android:src="@drawable/bg_asilovivimos" />
 
     <Button
-        android:id="@+id/asilovivimos_play"
+        android:id="@+id/reproductor_plays"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_centerHorizontal="true"
@@ -31,7 +36,7 @@
         android:src="@drawable/icon_sodicac" />
 
     <Button
-        android:id="@+id/asilovivimos_menu"
+        android:id="@+id/legal_salir"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_alignParentLeft="true"
@@ -40,7 +45,7 @@
         android:background="@drawable/ic_menu_icon"
         android:minHeight="32dp"
         android:minWidth="32dp"
-        android:text=" " />
+        android:text="" />
 
     <LinearLayout
         android:layout_width="wrap_content"

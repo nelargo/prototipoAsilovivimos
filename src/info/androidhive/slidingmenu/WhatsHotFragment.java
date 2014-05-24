@@ -1,9 +1,15 @@
 package info.androidhive.slidingmenu;
 
+import info.androidhive.slidingmenu.adapter.ListVideoAdapter;
+import info.androidhive.slidingmenu.model.ListVideosItem;
+
 import java.util.ArrayList;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +35,7 @@ public class WhatsHotFragment extends Fragment {
         
 		
 		lv = (ListView)rootView.findViewById(R.id.whlistview);
+
     	ListVideoAdapter lva = new ListVideoAdapter(this.getActivity().getApplicationContext(), items);
     	lv.setFriction(0.01f);
     	lv.setVelocityScale(0.2f);
@@ -41,11 +48,11 @@ public class WhatsHotFragment extends Fragment {
 	
 	public ArrayList<ListVideosItem> loadVideos(){
 		ArrayList<ListVideosItem> i = new ArrayList<ListVideosItem>();
-		ListVideosItem a = new ListVideosItem("Chile vs España 22:30", "1");
-		ListVideosItem b = new ListVideosItem("Chile vs Australia 22:30", "2");
-		ListVideosItem c = new ListVideosItem("Chile vs Brasil 22:30", "3");
-		ListVideosItem d = new ListVideosItem("Chile vs Holanda 22:30", "4");
-		ListVideosItem e = new ListVideosItem("Chile vs Alemania 22:30", "5");
+		ListVideosItem a = new ListVideosItem("Chile vs España", "1");
+		ListVideosItem b = new ListVideosItem("Chile vs España", "2");
+		ListVideosItem c = new ListVideosItem("Chile vs España", "3");
+		ListVideosItem d = new ListVideosItem("Chile vs España", "4");
+		ListVideosItem e = new ListVideosItem("Chile vs España", "5");
 		
 		for(int j = 0; j < 2; j++){
 			i.add(a);

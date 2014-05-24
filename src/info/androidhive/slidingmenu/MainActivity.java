@@ -204,7 +204,7 @@ public class MainActivity extends Activity {
 	/**
 	 * Diplaying fragment view for selected nav drawer list item
 	 * */
-	private void displayView(int position) {
+	public void displayView(int position) {
 		// update the main content by replacing fragments
 		Fragment fragment = null;
 		switch (position) {
@@ -218,14 +218,16 @@ public class MainActivity extends Activity {
 			startActivity(a);
 			break;
 		case 2:
-//			Intent j = new Intent(this,ListActivity.class);
-//			startActivity(j);
+//			Intent b = new Intent(this, VideoListActivity.class);
+//			startActivity(b);
 			fragment = new WhatsHotFragment(); //LISTADO
 			break;
 		case 3:
 			fragment = new PagesFragment(); //CHAT
 			break;
 		case 4:
+//			Intent d = new Intent(this, VideoListActivity.class);
+//			startActivity(d);
 			fragment = new WhatsHotFragment(); //LISTADO
 			break;
 		case 5:
@@ -235,7 +237,7 @@ public class MainActivity extends Activity {
 			this.finish(); //LOGOUT
 			break;
 		case 7:
-			fragment = new HomeFragment();
+			fragment = new HomeFragment(); //PREGUNTAS
 			break;
 		default:
 			break;
@@ -247,13 +249,16 @@ public class MainActivity extends Activity {
 					.replace(R.id.frame_container, fragment).commit();
 
 			// update selected item and title, then close the drawer
-			mDrawerList.setItemChecked(position, true);
-			mDrawerList.setSelection(position);
-			setTitle(navMenuTitles[position]);
+
 			mDrawerLayout.closeDrawer(mDrawerList);
+//			mDrawerList.setItemChecked(position, true);
+//			mDrawerList.setSelection(position);
+//			setTitle(navMenuTitles[position]);
+//			mDrawerLayout.closeDrawer(mDrawerList);
 		} else {
 			// error in creating fragment
 			Log.e("MainActivity", "Error in creating fragment");
+			mDrawerLayout.closeDrawer(mDrawerList);
 		}
 	}
 

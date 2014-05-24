@@ -30,13 +30,13 @@
             android:background="@drawable/anim_btn_upload" />
 
         <TextView
-            android:id="@+id/link_to_register"
+            android:id="@+id/txt_home_subir"
             android:layout_width="fill_parent"
             android:layout_height="48dp"
             android:gravity="center"
             android:text="SUBIR"
             android:textColor="#FFFFFF"
-            android:textSize="20dip"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -72,7 +72,7 @@
             android:src="@drawable/icon_question" />
 
         <TextView
-            android:id="@+id/itemListTitle"
+            android:id="@+id/txt_home_p1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="7dp"
@@ -142,15 +142,15 @@
             android:id="@+id/imageView5"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginLeft="-60dp"
+            android:layout_marginLeft="-70dp"
             android:scaleType="fitXY"
             android:src="@drawable/icon_question" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txt_home_p2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="40dp"
             android:paddingLeft="7dp"
             android:text="¿Es GOL?"
             android:textColor="@color/white"
@@ -165,6 +165,7 @@
         android:layout_alignLeft="@+id/linearLayout3"
         android:layout_alignRight="@+id/linearLayout3"
         android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="7dp"
         android:gravity="center" >
 
         <ToggleButton

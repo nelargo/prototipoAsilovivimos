@@ -1,6 +1,7 @@
 package info.androidhive.slidingmenu;
 
 import android.app.Fragment;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,10 +9,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class HomeFragment extends Fragment {
 	private ToggleButton tbSi,tbNo, tbU, tbCasa, tbCancha, tbBar;
+	private TextView p1,p2,subir;
 	
 	public HomeFragment(){}
 	
@@ -20,6 +23,16 @@ public class HomeFragment extends Fragment {
             Bundle savedInstanceState) {
  
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
+        p1 = (TextView)rootView.findViewById(R.id.txt_home_p1);
+        p2 = (TextView)rootView.findViewById(R.id.txt_home_p2);
+        subir = (TextView)rootView.findViewById(R.id.txt_home_subir);
+        
+        //--Typeface TextView
+        p1.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "din_regular.ttf"));
+        p2.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "din_regular.ttf"));
+        subir.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "bauhaus_93.ttf"));
+        
         
         tbNo		= (ToggleButton) rootView.findViewById(R.id.ToggleButton01);
         tbNo.setOnClickListener(new OnClickListener(){
