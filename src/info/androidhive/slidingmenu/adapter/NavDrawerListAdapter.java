@@ -51,8 +51,12 @@ public class NavDrawerListAdapter extends BaseAdapter {
         TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
         TextView txtCount = (TextView) convertView.findViewById(R.id.counter);
          
-        imgIcon.setImageResource(navDrawerItems.get(position).getIcon());        
-        txtTitle.setText(navDrawerItems.get(position).getTitle());
+
+    	imgIcon.setImageResource(navDrawerItems.get(position).getIcon());
+//        if(position != 6){
+        	txtTitle.setText(navDrawerItems.get(position).getTitle());
+//        }
+        
         
         txtCount.setVisibility(View.GONE);
         

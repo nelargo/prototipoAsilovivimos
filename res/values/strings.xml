@@ -13,7 +13,7 @@
     <string-array name="nav_drawer_items">
         <item >Camara</item> 					<!-- 0 -->
         <item >Asilovivimos</item> 				<!-- 1 -->
-        <item >Subir Videos</item> 				<!-- 2 -->
+        <item >Mis Videos</item> 				<!-- 2 -->
         <item >Chat</item>						<!-- 3 -->
         <item >Importar Video</item>			<!-- 4 -->
         <item >Términos y Condiciones</item>	<!-- 5 -->

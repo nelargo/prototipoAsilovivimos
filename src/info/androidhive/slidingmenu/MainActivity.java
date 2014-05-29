@@ -12,25 +12,32 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.DrawerLayout.LayoutParams;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.Transformation;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
-
+	private int prev_frag = -1;
+	private int RESULT_LOAD_VIDEO = 5;
 	// nav drawer title
 	private CharSequence mDrawerTitle;
 
@@ -48,7 +55,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		Point size = new Point();
+		Display display = getWindowManager().getDefaultDisplay();
+		display.getSize(size);
+		int width = size.x;
+		int proporcion = width/240;
+//		Toast.makeText(getApplicationContext(), ""+width, Toast.LENGTH_LONG).show();
 		mTitle = mDrawerTitle = getTitle();
 
 		// load slide menu items
@@ -68,7 +80,12 @@ public class MainActivity extends Activity {
 		
 		mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 		
-		//mDrawerLayout.setPadding(0, 0, 229, 0);
+		DrawerLayout.LayoutParams params = (android.support.v4.widget.DrawerLayout.LayoutParams) mDrawerList.getLayoutParams();
+	    params.width = width-(65+40*proporcion);
+		mDrawerList.setLayoutParams(params);
+		iv.setPadding(width-(65+40*proporcion), 0, 0, 0);
+//		iv.setMaxWidth(width);
+//		mDrawerLayout.setPadding(0, 0, 95, 0);
 		//mDrawerLayout.setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
 		
 		navDrawerItems = new ArrayList<NavDrawerItem>();
@@ -129,6 +146,9 @@ public class MainActivity extends Activity {
 				R.string.app_name // nav drawer close - description for accessibility
 		) {
 			public void onDrawerClosed(View view) {
+				Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
+				 
+				iv.setAnimation(animFadeOut);
 				iv.setVisibility(View.GONE);
 				getActionBar().setTitle(mTitle);				
 				//iv.startAnimation(new MyScaler(1.0f, 1.0f, 1.0f, 0.0f, 500, view, true));
@@ -138,6 +158,8 @@ public class MainActivity extends Activity {
 			}
 
 			public void onDrawerOpened(View view) {
+				Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);
+				iv.setAnimation(animFadeIn);
 				iv.setVisibility(View.VISIBLE);
 				getActionBar().setTitle(mDrawerTitle);				
 				
@@ -210,28 +232,30 @@ public class MainActivity extends Activity {
 		switch (position) {
 		case 0:
 			Intent i = new Intent(this,CameraActivity.class); //CAMARA
-			startActivity(i);
+			startActivityForResult(i,7);
 			break;
 		case 1:
-			//fragment = new PhotosFragment(); //ASILOVIVIMOS
 			Intent a = new Intent(this, AsilovivimosActivity.class);
 			startActivity(a);
 			break;
 		case 2:
-//			Intent b = new Intent(this, VideoListActivity.class);
-//			startActivity(b);
 			fragment = new WhatsHotFragment(); //LISTADO
+			prev_frag = 2;
 			break;
 		case 3:
 			fragment = new PagesFragment(); //CHAT
+			prev_frag = 3;
 			break;
 		case 4:
-//			Intent d = new Intent(this, VideoListActivity.class);
-//			startActivity(d);
-			fragment = new WhatsHotFragment(); //LISTADO
+//			fragment = new WhatsHotFragment(); //Importar
+//			prev_frag = 4;
+			Intent v = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+
+			startActivityForResult(v, RESULT_LOAD_VIDEO);
 			break;
 		case 5:
 			fragment = new FindPeopleFragment(); //TERMINOS
+			prev_frag = 5;
 			break;
 		case 6:
 			this.finish(); //LOGOUT
@@ -260,6 +284,19 @@ public class MainActivity extends Activity {
 			Log.e("MainActivity", "Error in creating fragment");
 			mDrawerLayout.closeDrawer(mDrawerList);
 		}
+	}
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		
+	    if (requestCode == 7) {
+	    	displayView(resultCode);
+	    }
+	    else if(requestCode==RESULT_LOAD_VIDEO){
+	    	if(resultCode == -1){
+	    		displayView(2);
+	    		Toast.makeText(getApplicationContext(), "Video Importado", Toast.LENGTH_SHORT).show();	    		
+	    	}
+	    }
 	}
 
 	@Override

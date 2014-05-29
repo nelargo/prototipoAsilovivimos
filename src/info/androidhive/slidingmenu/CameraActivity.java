@@ -71,6 +71,9 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Intent returnIntent = new Intent();
+				returnIntent.putExtra("result","result");
+				setResult(7,returnIntent);  //muestra la vista HOME
 				CameraActivity.this.finish();
 			}
         	
@@ -81,6 +84,9 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Intent returnIntent = new Intent();
+				returnIntent.putExtra("result","result");
+				setResult(2,returnIntent); //Muestra la vista Listado
 				CameraActivity.this.finish();
 			}
         	

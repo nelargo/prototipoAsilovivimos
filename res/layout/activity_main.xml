@@ -19,14 +19,13 @@
             android:layout_width="94dp"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:paddingLeft="226dp"
             android:src="@drawable/sponsor1"
             android:visibility="gone" />
 
     <!-- Listview to display slider menu -->
     <ListView
         android:id="@+id/list_slidermenu"
-        android:layout_width="227dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"

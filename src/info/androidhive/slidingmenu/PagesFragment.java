@@ -3,11 +3,13 @@ package info.androidhive.slidingmenu;
 import android.app.Fragment;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -21,6 +23,12 @@ public class PagesFragment extends Fragment {
             Bundle savedInstanceState) {
  
         View rootView = inflater.inflate(R.layout.fragment_pages, container, false);
+        
+        RelativeLayout bg = (RelativeLayout)rootView.findViewById(R.id.chat_frag_bg);
+        bg.setBackgroundResource(R.drawable.anim_list_homebg);
+        AnimationDrawable aniFrame = (AnimationDrawable) bg.getBackground();
+        aniFrame.start();
+        
         
         subir = (TextView)rootView.findViewById(R.id.txt_chat_entrar);
         subir.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "bauhaus_93.ttf"));
